@@ -1,5 +1,5 @@
 ## About
-This is my personal cirriculum vitae
+This is my personal curriculum vitae
 
 ## Technology Stack
 It was build on the incredible awesome [impress.js](http://bartaz.github.com/impress.js)
