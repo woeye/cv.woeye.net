@@ -92,6 +92,7 @@ video {
   vertical-align: baseline;
 }
 /* Variables */
+/* Helper funcs */
 body {
   height: 100%;
   background-color: #eee;
@@ -124,8 +125,12 @@ p {
   background-color: #8e1000;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  -webkit-transition-property: all;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
   -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
 }
 #top span:hover {
   top: 0;
@@ -214,7 +219,11 @@ p {
   color: #fff;
   opacity: 0;
   -webkit-transition-property: opacity, bottom;
+  -moz-transition-property: opacity, bottom;
+  -o-transition-property: opacity, bottom;
   -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
 }
 .impress-on-start #hint {
   opacity: 1;

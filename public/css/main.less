@@ -31,6 +31,21 @@ time, mark, audio, video {
 @color-dark: #333;
 @color-default: #7f7f7;
 
+/* Helper funcs */
+.all-transition-property(...) {
+  // See: http://stackoverflow.com/questions/8503088/concatenating-arbitrary-number-of-values-in-lesscss-mixin
+  @props: ~`'@{arguments}'.replace(/[\[\]]/g, '')`;
+  -webkit-transition-property: @props;
+  -moz-transition-property: @props;
+  -o-transition-property: @props;
+}
+
+.all-transition-duration(@duration) {
+  -webkit-transition-duration: @duration;
+  -moz-transition-duration: @duration;
+  -o-transition-duration: @duration;
+}
+
 body {
   height: 100%;
 
@@ -74,8 +89,8 @@ p {
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.35s;
+    .all-transition-property(top);
+    .all-transition-duration(0.35s);
 
     &:hover {
       top: 0;
@@ -190,8 +205,8 @@ p {
   color: #fff;
   opacity: 0;
 
-  -webkit-transition-property: opacity, bottom;
-  -webkit-transition-duration: 1s;
+  .all-transition-property(opacity, bottom);
+  .all-transition-duration(1s);
 }
 
 .impress-on-start #hint {
