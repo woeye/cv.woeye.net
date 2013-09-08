@@ -49,10 +49,8 @@
           //console.log(theItem);
           if (theItem.length > 0) {
             theItem.addClass('active');
-            document.title = 'Burrito Bande | ' + theItem.text();
             window.history.replaceState({}, theItem.text(), '#' + id);
           } else {
-            document.title = 'Burrito Bande | Home';
             window.history.replaceState({}, theItem.text(), '#home');
           }
           lastId = id;
