@@ -15,13 +15,24 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
   
   <script src="/js/jquery-1.10.1.min.js"></script>
+  <script src="/js/lodash-1.2.1.min.js"></script>
+  <script src="/js/jquery.scrollspy.js"></script>
 
   <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="/js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 </head>
 
 <body class="impress-not-supported">
-  <div id="top"><span>Übersicht</span></div>
+  <div id="top">
+    <div class="navi">
+      <ul>
+        <li><a href="#about-me">Über mich</a></li>
+        <li><a href="#projects">Projekte</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <span>Navigation</span>
+    </div>
+  </div>
   
   <!--
   <div class="fallback-message">
@@ -108,7 +119,7 @@
       </div>
     </section>
 
-    <section id="projekte">
+    <section id="projects">
       <div class="grid-row">
         <div class="grid-col span-6">
           <h1>Projekte</h1>
@@ -372,7 +383,8 @@
 
   <script>
     $(document).ready(function() {
-      $('.fancylink').fancybox();      
+      $('.fancylink').fancybox(); 
+      $('#top ul').scrollSpy();
     });
   </script>
 

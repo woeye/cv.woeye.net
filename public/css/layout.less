@@ -33,25 +33,40 @@ p {
   background-image: url(../images/top_bg.png);
   z-index: 100;
 
-  span {
+  .navi {
     position: absolute;
-    top: -10px;
+    top: -130px;
     right: 100px;
-    width: 150px;
-    height: 50px;
-    padding-top: 10px;
-    line-height: 50px;
+    padding: 30px 30px 10px 30px;
     color: #f6f6f6;
+    line-height: 30px;
     background-color: #8e1000;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 
     .all-transition-property(top);
     .all-transition-duration(0.35s);
 
+    ul {
+      padding-bottom: 20px;
+    }
+
+    li {
+      list-style: inside square;
+      width: 120px;
+    }
+
+    a {
+      color: #f6f6f6;
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
     &:hover {
       top: 0;
-      cursor: pointer;
       box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
   }
