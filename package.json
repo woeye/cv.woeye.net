@@ -5,7 +5,9 @@
   "keywords": ["Lars Hoss", "website"],
   "version": "1.0.0",
   "dependencies": {
-    "grunt": "~0.4.1",
+    "connect": "",
+    "grunt": "",
+    "less": "",
     "grunt-contrib-less": "",
     "grunt-contrib-watch": "",
     "grunt-contrib-connect": ""
